@@ -10,7 +10,7 @@ export const routes: Routes = [
 	{
 		path: 'dashboard',
 		loadComponent: () =>
-			import('./components/dasboard/feed/feed.component').then((m) => m.FeedComponent),
+			import('./components/dashboard/feed/feed.component').then((m) => m.FeedComponent),
 		canActivate: [AuthGuard]
 	},
 	{
@@ -36,34 +36,4 @@ export const routes: Routes = [
 		loadComponent: () =>
 			import('./components/extra-pages/page404/page404.component').then((m) => m.Page404Component)
 	}
-	/*
-	{
-		path: 'dashboard',
-		loadChildren: () =>
-			import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule),
-		canActivate: [AuthGuard]
-	},
-	{
-		path: 'auth/login',
-		loadComponent: () => import('./modules/auth/login/login.component').then((m) => m.LoginComponent)
-	},
-	{
-		path: 'auth',
-		loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule)
-	},
-	{
-		path: 'post/:id',
-		loadChildren: () => import('./modules/post/post.module').then((m) => m.PostModule),
-		canActivate: [AuthGuard]
-	},
-	{
-		path: 'profile/:username',
-		loadChildren: () => import('./modules/user/user.module').then((m) => m.UserModule),
-		canActivate: [AuthGuard]
-	},
-	{
-		path: '**',
-		loadChildren: () =>
-			import('./modules/extra-pages/extra-pages.module').then((m) => m.ExtraPagesModule)
-	}*/
 ];
